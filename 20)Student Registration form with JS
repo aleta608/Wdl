@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration</title>
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+.container {
+    width: 350px; margin: auto; margin-top: 50px;
+    background: white; padding: 20px;
+    border-radius: 12px; box-shadow: 0 0 10px gray;
+}
+input { width: 100%; padding: 8px; margin: 8px 0; }
+.btn { background: green; color: white; border: none; cursor: pointer; }
+.btn:hover { background: darkgreen; }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Student Registration</h2>
+
+<form onsubmit="return validateForm()">
+Name:
+<input type="text" id="name" required>
+
+Email:
+<input type="text" id="email" required>
+
+Password:
+<input type="password" id="password" required>
+
+Confirm Password:
+<input type="password" id="confirm" required>
+
+Phone Number:
+<input type="text" id="phone" required>
+
+<input type="submit" value="Register" class="btn">
+</form>
+</div>
+
+<script>
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
+    var confirm = document.getElementById("confirm").value;
+    var phone = document.getElementById("phone").value;
+
+    if (name=="" || email=="" || pass=="" || confirm=="" || phone=="") {
+        alert("All fields are required!");
+        return false;
+    }
+
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(pattern)) {
+        alert("Enter valid email!");
+        return false;
+    }
+
+    if (pass != confirm) {
+        alert("Passwords do not match!");
+        return false;
+    }
+
+    if (phone.length != 10 || isNaN(phone)) {
+        alert("Enter valid 10-digit phone number!");
+        return false;
+    }
+
+    alert("Registration Successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>
