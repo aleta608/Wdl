@@ -1,12 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Personal Details</title>
-</head>
-<body>
-<h1>Student Information</h1>
-<p><b>Name:</b> xyz</p>
-<p><i>Course:</i> Computer Engineering</p>
-<p><u>College:</u> I2IT</p>
-</body>
+<!doctype html> 
+<html> 
+    <head> 
+        <title>Student Portfolio</title> 
+    </head> 
+    <body> 
+        <h1 align="center">Student Portfolio</h1> 
+        <h2 align="center">Name: <b>Isha Patil</b></h2> 
+        <p>Course: <i>Computer Science</i></p> 
+
+        <h3 align="equal"><u>about me!</u></h3> 
+        <p align="equal">
+Hi! My name is Isha Patil and I am a computer science student. I have a passion for coding and technology, and I am always eager to learn new things. In my free time, I enjoy working on personal projects, exploring new programming languages, and staying up-to-date with the latest tech trends. I am excited to continue my journey in the field of computer science and contribute to innovative projects in the future.
+</p> 
+
+        <h3 align="center"><u>my hobbies!</u></h3> 
+        <ul> 
+            <li>Reading</li> 
+            <li>Swimming</li> 
+            <li>Playing the piano</li> 
+            <li>Traveling</li> 
+            <li>Cooking</li> 
+            <li>Photography</li> 
+        </ul> 
+
+        <h3 align="center"><u>Feedback Form</u></h3> 
+        <form> 
+            Name : <input type="text" name="name"><br><br> 
+            Email : <input type="email" name="email"><br><br> 
+            Feedback : <textarea name="feedback" rows="4" cols="50"></textarea> 
+
+            <input type="submit" value="Submit"><br><br> 
+
+            Gender:<br><br> 
+            <input type="radio" name="gender" value="male"> Male<br><br> 
+            <input type="radio" name="gender" value="female"> Female<br><br> 
+            <input type="radio" name="gender" value="other"> Other<br><br> 
+
+            Skills:<br><br> 
+            <input type="checkbox"> HTML<br><br> 
+            <input type="checkbox"> CSS<br><br> 
+            <input type="checkbox"> JavaScript<br><br> 
+
+            <input type="submit" value="Submit"> 
+        </form> 
+    </body> 
 </html>
