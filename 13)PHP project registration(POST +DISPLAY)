@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+Name: <input type="text" name="name"><br><br>
+Project: <input type="text" name="project"><br><br>
+<button type="submit">Submit</button>
+</form>
+
+<?php
+if ($_POST) {
+  echo "<h3>Details</h3>";
+  echo "Name: " . $_POST['name'] . "<br>";
+  echo "Project: " . $_POST['project'];
+}
+?>
+
+</body>
+</html>
