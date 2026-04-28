@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Details</title>
+</head>
+<body>
+<h1>Student Information</h1>
+<p><b>Name:</b> xyz</p>
+<p><i>Course:</i> Computer Engineering</p>
+<p><u>College:</u> I2IT</p>
+</body>
+</html>
