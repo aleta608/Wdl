@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Student Result Dashboard</h1>
+
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    <tr>
+        <td>Mathematics</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td>78</td>
+    </tr>
+    <tr>
+        <td>Chemistry</td>
+        <td>82</td>
+    </tr>
+    <tr>
+        <td>Computer</td>
+        <td>90</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+    background: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+tr:hover {
+    background: #ddd;
+}
