@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marks Calculator</title>
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+.container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px gray;
+    text-align: center;
+}
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+}
+button {
+    padding: 10px;
+    background: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: darkmagenta;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Student Marks Calculator</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="m1" placeholder="Subject 1">
+<input type="number" id="m2" placeholder="Subject 2">
+<input type="number" id="m3" placeholder="Subject 3">
+<input type="number" id="m4" placeholder="Subject 4">
+<input type="number" id="m5" placeholder="Subject 5">
+
+<br>
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+</div>
+
+<script>
+function calculate() {
+    var name = document.getElementById("name").value;
+    var m1 = parseFloat(document.getElementById("m1").value);
+    var m2 = parseFloat(document.getElementById("m2").value);
+    var m3 = parseFloat(document.getElementById("m3").value);
+    var m4 = parseFloat(document.getElementById("m4").value);
+    var m5 = parseFloat(document.getElementById("m5").value);
+
+    // Validation
+    if (name=="" || isNaN(m1) || isNaN(m2) || isNaN(m3) || isNaN(m4) || isNaN(m5)) {
+        alert("Please enter all details correctly!");
+        return;
+    }
+
+    var total = m1 + m2 + m3 + m4 + m5;
+    var percentage = total / 5;
+    var grade;
+
+    if (percentage >= 75) {
+        grade = "A";
+    } else if (percentage >= 60) {
+        grade = "B";
+    } else if (percentage >= 50) {
+        grade = "C";
+    } else {
+        grade = "Fail";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name +
+        "<br>Total: " + total +
+        "<br>Percentage: " + percentage.toFixed(2) + "%" +
+        "<br>Grade: " + grade;
+}
+</script>
+
+</body>
+</html>
