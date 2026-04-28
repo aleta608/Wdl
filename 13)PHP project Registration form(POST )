@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Competition Form</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+.container {
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+.btn {
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Project Competition Registration</h2>
+
+<form method="POST">
+    Name:
+    <input type="text" name="name" required>
+
+    Email:
+    <input type="email" name="email" required>
+
+    Project Title:
+    <input type="text" name="project" required>
+
+    <input type="submit" value="Submit" class="btn">
+</form>
+
+<hr>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $project = $_POST['project'];
+
+    echo "<h3>Submitted Details:</h3>";
+    echo "Name: " . $name . "<br>";
+    echo "Email: " . $email . "<br>";
+    echo "Project: " . $project;
+}
+?>
+
+</div>
+
+</body>
+</html>
