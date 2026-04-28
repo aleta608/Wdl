@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>I2IT College</title> 
+    <style> 
+        body { 
+            font-family: Arial; 
+            margin: 0; 
+            background-color: #f2f2f2; 
+        } 
+        header { 
+            background: #003366; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+        } 
+        img { 
+            width: 100px; 
+        } 
+        a { 
+            color: yellow; 
+            text-decoration: none; 
+        } 
+        a:hover { 
+            color: orange; 
+        } 
+        .container { 
+            padding: 20px; 
+        } 
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            background: white; 
+        } 
+        th, td { 
+            border: 1px solid black; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+        th { 
+            background: #003366; 
+            color: white; 
+        } 
+        tr:hover { 
+            background: #ddd; 
+        } 
+    </style> 
+</head> 
+<body> 
+<header> 
+    <img src="https://via.placeholder.com/100" alt="College Logo"> 
+    <h1>I2IT College</h1> 
+    <p> 
+        Visit Official Website:  
+        <a href="https://www.isquareit.edu.in" target="_blank">Click Here</a> 
+    </p> 
+</header> 
+<div class="container"> 
+    <h2>Courses and Subjects</h2> 
+    <table> 
+        <tr> 
+            <th>Course</th> 
+            <th>Subject 1</th> 
+            <th>Subject 2</th> 
+            <th>Subject 3</th> 
+        </tr> 
+        <tr> 
+            <td>Computer Engineering</td> 
+            <td>DBMS</td> 
+            <td>OS</td> 
+            <td>CN</td> 
+        </tr> 
+        <tr> 
+            <td>IT</td> 
+            <td>Web Dev</td> 
+            <td>Python</td> 
+            <td>AI</td> 
+        </tr> 
+        <tr> 
+            <td>Electronics</td> 
+            <td>Circuits</td> 
+            <td>Signals</td> 
+            <td>Microprocessor</td> 
+        </tr> 
+    </table> 
+</div> 
+</body> 
+</html>
