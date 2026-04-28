@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marks Calculation</title>
+</head>
+<body>
+
+<h2>Student Marks Analysis</h2>
+
+<?php
+$marks = array(85, 90, 78, 88, 92);
+
+$totalSubjects = count($marks);
+$total = array_sum($marks);
+$max = max($marks);
+$percentage = $total / $totalSubjects;
+
+echo "Marks: " . implode(", ", $marks);
+
+echo "<br><br>Total Marks: " . $total;
+echo "<br>Maximum Marks: " . $max;
+echo "<br>Percentage: " . round($percentage, 2) . "%";
+?>
+
+</body>
+</html>
