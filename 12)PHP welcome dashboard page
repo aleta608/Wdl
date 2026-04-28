@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+    background: #f2f2f2;
+}
+.box {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>
+        <?php
+        echo "Welcome, Isha!";
+        ?>
+    </h2>
+
+    <p>
+        <?php
+        date_default_timezone_set("Asia/Kolkata");
+        echo "Date: " . date("d-m-Y");
+        ?>
+    </p>
+
+    <p>
+        <?php
+        echo "Time: " . date("h:i:s A");
+        ?>
+    </p>
+</div>
+
+</body>
+</html>
