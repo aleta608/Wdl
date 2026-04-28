@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Marks Form</title>
+<style>
+body { font-family: Arial; background: #f2f2f2; }
+.container {
+    width: 350px; margin: auto; margin-top: 50px;
+    background: white; padding: 20px;
+    border-radius: 10px; box-shadow: 0 0 10px gray;
+}
+input { width: 100%; padding: 8px; margin: 8px 0; }
+.btn { background: green; color: white; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Student Marks Form</h2>
+
+<form method="POST">
+Name:
+<input type="text" name="name" required>
+
+Marks 1:
+<input type="number" name="m1" required>
+
+Marks 2:
+<input type="number" name="m2" required>
+
+Marks 3:
+<input type="number" name="m3" required>
+
+<input type="submit" value="Calculate" class="btn">
+</form>
+
+<hr>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $m1 = $_POST['m1'];
+    $m2 = $_POST['m2'];
+    $m3 = $_POST['m3'];
+
+    $upperName = strtoupper($name);
+    $length = strlen($name);
+
+    $marks = array($m1, $m2, $m3);
+    $total = array_sum($marks);
+    $avg = $total / count($marks);
+
+    echo "<h3>Result</h3>";
+    echo "Name (Uppercase): $upperName <br>";
+    echo "Name Length: $length <br>";
+    echo "Total Marks: $total <br>";
+    echo "Average: " . round($avg, 2);
+}
+?>
+
+</div>
+</body>
+</html>
