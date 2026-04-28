@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Web Page</h2>
+
+<img src="https://via.placeholder.com/150">
+
+<p><a href="https://www.google.com">visitGoogle</a></p>
+
+<table border="1">
+<tr>
+<td>
+<table border="1">
+<tr><td>Nested Table</td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
