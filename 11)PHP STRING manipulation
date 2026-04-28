@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+Enter String: <input type="text" name="str">
+<button type="submit">Process</button>
+</form>
+
+<?php
+if (isset($_POST['str'])) {
+  $str = $_POST['str'];
+
+  echo "<br>Original: $str";
+  echo "<br>Reverse: " . strrev($str);
+  echo "<br>Length: " . strlen($str);
+  echo "<br>Substring (0-5): " . substr($str, 0, 5);
+}
+?>
+
+</body>
+</html>
