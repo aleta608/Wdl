@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Area Calculator</title>
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+input {
+    padding: 8px;
+    margin: 5px;
+}
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
 <body>
 
-<select id="shape">
-  <option value="rectangle">Rectangle</option>
-  <option value="triangle">Triangle</option>
-  <option value="circle">Circle</option>
-</select>
+<h2>Area Calculator</h2>
 
-<input id="a" placeholder="Value 1">
-<input id="b" placeholder="Value 2">
+<input type="number" id="value1" placeholder="Enter value 1">
+<input type="number" id="value2" placeholder="Enter value 2">
+<br>
 
-<button onclick="calc()">Calculate</button>
+<button onclick="calculateArea('rectangle')">Rectangle</button>
+<button onclick="calculateArea('triangle')">Triangle</button>
+<button onclick="calculateArea('circle')">Circle</button>
 
-<p id="res"></p>
+<h3 id="result"></h3>
 
 <script>
-function calc() {
-  let shape = document.getElementById("shape").value;
-  let a = parseFloat(document.getElementById("a").value);
-  let b = parseFloat(document.getElementById("b").value);
-  let area;
+function calculateArea(shape) {
+    var v1 = parseFloat(document.getElementById("value1").value);
+    var v2 = parseFloat(document.getElementById("value2").value);
+    var area;
 
-  switch (shape) {
-    case "rectangle":
-      area = a * b;
-      break;
-    case "triangle":
-      area = 0.5 * a * b;
-      break;
-    case "circle":
-      area = 3.14 * a * a;
-      break;
-  }
+    // Validation
+    if (isNaN(v1) || (shape !== 'circle' && isNaN(v2))) {
+        document.getElementById("result").innerHTML = "Please enter valid values!";
+        return;
+    }
 
-  document.getElementById("res").innerHTML = "Area: " + area;
+    switch(shape) {
+        case 'rectangle':
+            area = v1 * v2;
+            break;
+
+        case 'triangle':
+            area = 0.5 * v1 * v2;
+            break;
+
+        case 'circle':
+            area = Math.PI * v1 * v1;
+            break;
+
+        default:
+            area = "Invalid shape";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Area: " + area.toFixed(2);
 }
 </script>
 
