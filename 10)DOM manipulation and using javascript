@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>DOM Example</title> 
+ <style> 
+ body { 
+ font-family: Arial; 
+ text-align: center; 
+ margin-top: 50px; 
+ } 
+ button { 
+ padding: 10px 15px; 
+ background: blue; 
+ color: white; 
+ border: none; 
+ cursor: pointer; 
+ } 
+ button:hover { 
+ background: darkblue; 
+ } 
+ </style> 
+</head> 
+<body> 
+
+<h1 id="heading">Welcome Student</h1> 
+<p id="text">Click the button to change content</p> 
+
+<button onclick="changeContent()">Click Me</button> 
+
+<script> 
+function changeContent() { 
+ document.getElementById("heading").innerHTML = "Welcome Isha"; 
+ document.getElementById("text").innerHTML = "Content has been updated using DOM!"; 
+} 
+</script> 
+
+</body> 
+</html>
