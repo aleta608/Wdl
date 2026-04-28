@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Registration Form</h2>
+
+<form>
+Name: <input type="text" required><br><br>
+Email: <input type="email" required><br><br>
+DOB: <input type="date"><br><br>
+<button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
