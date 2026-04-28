@@ -1,0 +1,9 @@
+<?php
+$marks = [80, 75, 90, 85, 70];
+
+$total = array_sum($marks);
+$percentage = $total / count($marks);
+
+echo "Total: $total <br>";
+echo "Percentage: $percentage% <br>";
+?>
