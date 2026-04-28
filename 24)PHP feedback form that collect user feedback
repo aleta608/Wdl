@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+.container {
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+.btn {
+    background: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Feedback Form</h2>
+
+<form method="POST">
+Name:
+<input type="text" name="name" required>
+
+Email:
+<input type="email" name="email" required>
+
+Feedback:
+<textarea name="feedback" required></textarea>
+
+<input type="submit" value="Submit" class="btn">
+</form>
+
+<hr>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $feedback = $_POST['feedback'];
+
+    date_default_timezone_set("Asia/Kolkata");
+
+    echo "<h3>Feedback Received</h3>";
+    echo "Name: $name <br>";
+    echo "Email: $email <br>";
+    echo "Feedback: $feedback <br>";
+    echo "<br>Date: " . date("d-m-Y");
+    echo "<br>Time: " . date("h:i:s A");
+}
+?>
+
+</div>
+</body>
+</html>
