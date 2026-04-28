@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Foodie Restaurant</title> 
+    <style> 
+        body { 
+            margin: 0; 
+            font-family: Arial; 
+            background: #a1dbfd; 
+        } 
+        header { 
+            background: url("https://images.unsplash.com/photo-1555992336-03a23c3b3b63"); 
+            background-size: cover; 
+            color: white; 
+            text-align: center; 
+            padding: 80px 20px; 
+        } 
+        header h1 { 
+            font-size: 40px; 
+        } 
+        nav { 
+            background: black; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+        nav a { 
+            color: white; 
+            margin: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        } 
+        nav a:hover { 
+            color: orange; 
+        } 
+    </style> 
+</head> 
+<body> 
+<header> 
+    <h1>Foodie Restaurant</h1> 
+    <p>Experience the taste of happiness</p> 
+</header> 
+<nav> 
+    <a href="#">Home</a> 
+    <a href="#">Menu</a> 
+    <a href="#">Contact</a> 
+</nav> 
+</body> 
+</html>
